@@ -17,10 +17,27 @@ Route::get('/shoes', function () {
     return view('shoes.index', compact('shoes')); 
 })->name('shoes.index');
 
+Route::get('/shoes/create', [ShoeController::class, 'create'])->name('shoes.create');
+
+
+Route::post('/shoes', [ShoeController::class, 'store'])->name('shoes.store');
+
+
+Route::get('/shoes/{id}/edit', [ShoeController::class, 'edit'])->name('shoes.edit');
+
+
+Route::put('/shoes/{id}', [ShoeController::class, 'update'])->name('shoes.update');
+
+
+Route::delete('/shoes/{id}', [ShoeController::class, 'destroy'])->name('shoes.destroy');
+
+
 
 Route::get('/contact', function () {
     return view('contact'); 
 })->name('contact');
+Route::post('/contact', [App\Http\Controllers\ContactController::class, 'store'])->name('contact.store');
+
 
 
 Route::get('/history', function () {

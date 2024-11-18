@@ -252,3 +252,31 @@ footer .footer-container p {
 .view-details-btn:hover {
     background-color: #0056b3;
 }
+
+
+
+
+
+/*history*/
+
+.history-container {
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.history-container h1 {
+    font-size: 2rem;
+    color: #333;
+}
+
+.history-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.history-container ul li {
+    background-color: #fff;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
