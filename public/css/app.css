@@ -280,3 +280,212 @@ footer .footer-container p {
     padding: 10px;
     border: 1px solid #ddd;
 }
+
+
+
+/* Container voor de lijst van schoenen */
+.shoe-list-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Titel */
+.shoe-list-container h1 {
+    font-size: 32px;
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Stijl voor de knop om een nieuwe schoen toe te voegen */
+.cta-button {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+/* Lijst van schoenen */
+.shoe-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.shoe-item {
+    background-color: #f9f9f9;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Gegevens van de schoen */
+.shoe-details {
+    flex: 1;
+}
+
+.shoe-details h3 {
+    font-size: 24px;
+    margin: 0 0 5px 0;
+    color: #333;
+}
+
+.shoe-details p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Acties zoals bewerken en verwijderen */
+.shoe-actions {
+    text-align: right;
+}
+
+.btn-edit,
+.btn-delete {
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+/* Bewerken knop */
+.btn-edit {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-edit:hover {
+    background-color: #218838;
+}
+
+/* Verwijderen knop */
+.btn-delete {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-delete:hover {
+    background-color: #c82333;
+}
+
+/* Bevestigingsknop van het formulier */
+.delete-form {
+    display: inline-block;
+}
+
+/* Lege lijst weergave */
+.shoe-list-container p {
+    text-align: center;
+    font-size: 18px;
+    color: #777;
+}
+
+
+
+/* Container voor het formulier */
+.shoe-form-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Titel van het formulier */
+.shoe-form-container h1 {
+    font-size: 28px;
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Het formulier zelf */
+.shoe-form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Label voor invoervelden */
+.shoe-form label {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+/* Invoervelden en selecteeropties */
+.shoe-form input,
+.shoe-form select {
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+}
+
+/* Focus effect op invoervelden */
+.shoe-form input:focus,
+.shoe-form select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Plaatsvervangers voor de invoervelden */
+.shoe-form input::placeholder {
+    color: #aaa;
+}
+
+/* Submit knop */
+.btn-submit {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect voor de submit knop */
+.btn-submit:hover {
+    background-color: #0056b3;
+}
+
+/* Verantwoordelijke tekst voor foutmeldingen of succes */
+.shoe-form .error-message {
+    color: #dc3545;
+    font-size: 14px;
+    margin-top: -15px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.shoe-form .success-message {
+    color: #28a745;
+    font-size: 14px;
+    margin-top: -15px;
+    margin-bottom: 15px;
+    text-align: center;
+}
