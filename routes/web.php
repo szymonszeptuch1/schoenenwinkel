@@ -2,6 +2,7 @@
 
 use App\Models\Shoe;
 use App\Models\Category;
+use App\Http\Controllers\ShoeController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {

@@ -208,6 +208,47 @@ footer .footer-container p {
 }
 
 
+/*SHOEINDEX*/
 
 
+.shoe-list {
+    text-align: center;
+    margin-top: 50px;
+}
 
+.shoe-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.shoe-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    text-align: center;
+}
+
+.shoe-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.shoe-card p {
+    margin-bottom: 15px;
+}
+
+.view-details-btn {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+}
+
+.view-details-btn:hover {
+    background-color: #0056b3;
+}
