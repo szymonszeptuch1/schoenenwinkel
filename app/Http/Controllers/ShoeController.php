@@ -3,18 +3,26 @@
 namespace App\Http\Controllers;
 use App\Models\Shoe;
 use App\Models\Category;
-
 use Illuminate\Http\Request;
 
 class ShoeController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        // Haal alle schoenen op uit de database
-        $shoes = Shoe::all();
-        
-        // Stuur de schoenen naar de view
-        return view('shoes.index', compact('shoes'));
+        // Haal de zoekterm op uit de request
+        $search = $request->input('search');
+
+        // Haal schoenen op en filter ze indien er een zoekterm is
+        if ($search) {
+            $shoes = Shoe::where('name', 'like', "%{$search}%")
+                ->orWhere('brand', 'like', "%{$search}%")
+                ->get();
+        } else {
+            $shoes = Shoe::all();
+        }
+
+        // Stuur de schoenen en zoekterm naar de view
+        return view('shoes.index', compact('shoes', 'search'));
     }
 
     public function create()

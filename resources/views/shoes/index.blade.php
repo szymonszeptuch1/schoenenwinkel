@@ -4,6 +4,12 @@
     <div class="shoe-list-container">
         <h1>Schoenenlijst</h1>
 
+        <!-- Zoekbalk -->
+        <form action="{{ route('shoes.index') }}" method="GET" class="search-form">
+            <input type="text" name="search" placeholder="Zoek op naam of merk" value="{{ request()->query('search') }}" />
+            <button type="submit" class="btn-search">Zoeken</button>
+        </form>
+
         <a href="{{ route('shoes.create') }}" class="cta-button">Voeg een nieuwe schoen toe</a>
 
         @if($shoes->isEmpty())
