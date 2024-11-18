@@ -10,6 +10,20 @@
             <button type="submit" class="btn-search">Zoeken</button>
         </form>
 
+        <!-- Categorie-filter -->
+        <form action="{{ route('shoes.index') }}" method="GET" class="filter-form">
+            <label for="category">Categorie:</label>
+            <select name="category" id="category">
+                <option value="">Alle categorieën</option>
+                @foreach($categories as $category)
+                    <option value="{{ $category->id }}" {{ request('category') == $category->id ? 'selected' : '' }}>
+                        {{ $category->name }}
+                    </option>
+                @endforeach
+            </select>
+            <button type="submit" class="btn-filter">Filteren</button>
+        </form>
+
         <a href="{{ route('shoes.create') }}" class="cta-button">Voeg een nieuwe schoen toe</a>
 
         @if($shoes->isEmpty())
@@ -19,7 +33,8 @@
                 @foreach($shoes as $shoe)
                     <li class="shoe-item">
                         <div class="shoe-details">
-                            <h3>{{ $shoe->name }}</h3>
+                            <!-- Maak de naam van de schoen klikbaar en leid naar de show-pagina -->
+                            <h3><a href="{{ route('shoes.show', $shoe->id) }}">{{ $shoe->name }}</a></h3>
                             <p>Merk: {{ $shoe->brand }}</p>
                             <p>Prijs: €{{ number_format($shoe->price, 2) }}</p>
                         </div>

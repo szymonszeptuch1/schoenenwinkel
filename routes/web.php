@@ -32,6 +32,7 @@ Route::put('/shoes/{id}', [ShoeController::class, 'update'])->name('shoes.update
 Route::delete('/shoes/{id}', [ShoeController::class, 'destroy'])->name('shoes.destroy');
 
 Route::resource('shoes', ShoeController::class);
+Route::get('/shoe/{id}', [ShoeController::class, 'show'])->name('shoes.show');
 
 
 
