@@ -4,13 +4,13 @@
     <div class="shoe-list-container">
         <h1>Schoenenlijst</h1>
 
-        <!-- Zoekbalk -->
+        
         <form action="{{ route('shoes.index') }}" method="GET" class="search-form">
             <input type="text" name="search" placeholder="Zoek op naam of merk" value="{{ request()->query('search') }}" />
             <button type="submit" class="btn-search">Zoeken</button>
         </form>
 
-        <!-- Categorie-filter -->
+       
         <form action="{{ route('shoes.index') }}" method="GET" class="filter-form">
             <label for="category">Categorie:</label>
             <select name="category" id="category">
@@ -33,7 +33,7 @@
                 @foreach($shoes as $shoe)
                     <li class="shoe-item">
                         <div class="shoe-details">
-                            <!-- Maak de naam van de schoen klikbaar en leid naar de show-pagina -->
+                            
                             <h3><a href="{{ route('shoes.show', $shoe->id) }}">{{ $shoe->name }}</a></h3>
                             <p>Merk: {{ $shoe->brand }}</p>
                             <p>Prijs: €{{ number_format($shoe->price, 2) }}</p>

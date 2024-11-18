@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}"> <!-- Je eigen CSS-bestand -->
 </head>
 <body>
-    <!-- Navigatiebalk -->
+    
     <header class="header">
         <nav class="navbar">
             <div class="logo">
@@ -22,19 +22,19 @@
         </nav>
     </header>
 
-    <!-- Main Content -->
+    
     <main class="main-content">
         @yield('content')
     </main>
 
-    <!-- Footer -->
+    
     <footer class="footer">
         <div class="footer-container">
             <p>&copy; 2024 Schoenenwinkel | Alle rechten voorbehouden.</p>
         </div>
     </footer>
 
-    <!-- JavaScript-bestanden -->
+    
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>
